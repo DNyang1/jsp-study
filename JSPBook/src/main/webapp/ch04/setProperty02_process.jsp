@@ -16,6 +16,6 @@
 	<jsp:setProperty property="*" name="person"/>
 	
 	 	아이디: <input type="text" name="id"><br>
-	 	이름: <input type="text" name="id"><br>
+	 	이름: <input type="text" name="name"><br>
 </body>
 </html>

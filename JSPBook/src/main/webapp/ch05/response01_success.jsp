@@ -1,15 +1,13 @@
+<%@page import="java.util.Enumeration"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Implicit Objects</title>
 </head>
 <body>
-	<!-- 푸터(바닥글) 영역 -->
-  <footer class="pt-3 mt-4 text-body-secondary border-top">
-    &copy; BookMarket
-  </footer>
+	로그인을 성공했습니다!!
 </body>
 </html>
