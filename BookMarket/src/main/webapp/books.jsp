@@ -1,9 +1,10 @@
+<%@page import="dao.BookRepository"%>
 <%@page import="dto.Book"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" />
+<%-- <jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" /> --%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +24,11 @@
     </jsp:include>
 
 		<%
-			List<Book> listOfBooks = bookDAO.getAllBooks();
+			// List<Book> listOfBooks = bookDAO.getAllBooks();
+		
+			// BookRepository 공유 객체로 변경
+			BookRepository dao = BookRepository.getInstance();
+			List<Book> listOfBooks = dao.getAllBooks();
 		%>
 
     <div class="row align-items-md-stretch text-center">
@@ -38,14 +43,14 @@
       			<%= book.getAuthor() %>
       			<br>
       			<%= book.getPublisher() %> | <%= book.getReleaseDate() %>
-      		</p>	
+      		</p>
       		<p><%= book.getDescription().substring(0, 60) %>...</p>
       		<p><%= book.getUnitPrice() %>원</p>
       		<p>
       			<!-- 보조 기기(스크린 리더)에게 "이거 버튼처럼 동작하는 요소야" 라고 알려줌 -->
-      			<a href="./book.jsp?id=<%= book.getBookId() %>" class="btn btn-secondary" role="button">
-      				상세 정보 &raquo;
-      			</a>
+						<a href="./book.jsp?id=<%= book.getBookId() %>" class="btn btn-secondary" role="button">
+							상세 정보 &raquo;
+						</a>      		
       		</p>
       	</div>
       </div>

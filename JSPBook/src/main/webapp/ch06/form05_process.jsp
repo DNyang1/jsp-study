@@ -17,7 +17,7 @@
 		String phone2 = request.getParameter("phone2");
 		String phone3 = request.getParameter("phone3");
 		String gender = request.getParameter("gender");
-/* 		String hobby1 = request.getParameter("hobby1");
+		/* String hobby1 = request.getParameter("hobby1");
 		String hobby2 = request.getParameter("hobby2");
 		String hobby3 = request.getParameter("hobby3"); */
 		String[] hobbies = request.getParameterValues("hobby");
@@ -31,11 +31,11 @@
 	<p>성별: <%= gender %></p>
 	<p>취미: 
 		<%
-		 if (hobbies != null) {
-			 for (String hobby : hobbies) {
-				 out.println(hobby);
-			 }
-		 }
+			if (hobbies != null) {
+				for (String hobby : hobbies) {
+					out.println(" " + hobby);
+				}
+			}
 		%>
 	</p>
 	<p>가입인사: <%= comment %></p>

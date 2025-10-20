@@ -9,7 +9,7 @@
 <body>
 	<!-- 회원 가입 양식에서 폼 데이터 전송받기 -->
 	<h3>회원가입</h3>
-	<form action="form04_process.jsp" name="member" method="post">
+	<form action="form05_process.jsp" name="member" method="post">
 		<p>
 			아이디: <input type="text" name="id">
 			<button type="button">아이디 중복검사</button>
@@ -39,9 +39,9 @@
 		</p>
 		<p>
 			취미: 
-			독서<input type="checkbox" name="hobby1" value="독서" checked>
-			운동<input type="checkbox" name="hobby2" value="운동"> 
-			영화<input type="checkbox" name="hobby3" value="영화">
+			독서<input type="checkbox" name="hobby" value="독서" checked>
+			운동<input type="checkbox" name="hobby" value="운동"> 
+			영화<input type="checkbox" name="hobby" value="영화">
 		</p>
 		<p>
 			<textarea rows="3" cols="30" name="comment" placeholder="가입 인사를 입력해주세요"></textarea>

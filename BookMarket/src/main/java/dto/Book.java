@@ -5,10 +5,10 @@ import java.io.Serializable;
 // 도서 클래스(도서 데이터를 표현하는 클래스로 자바빈으로 작성)
 public class Book implements Serializable {
 
-	private static final long serialVersionUID = -4231244911944390751L;
 	/**
 	 * 
 	 */
+	private static final long serialVersionUID = 700971687575271600L;
 	
 	private String bookId; 		 // 책 ID
 	private String name;		 // 책이름
@@ -26,7 +26,6 @@ public class Book implements Serializable {
 	}
 
 	public Book(String bookId, String name, int unitPrice) {
-		super();
 		this.bookId = bookId;
 		this.name = name;
 		this.unitPrice = unitPrice;
@@ -119,7 +118,6 @@ public class Book implements Serializable {
 	public void setFilename(String filename) {
 		this.filename = filename;
 	}
-
 	
 	
 }
