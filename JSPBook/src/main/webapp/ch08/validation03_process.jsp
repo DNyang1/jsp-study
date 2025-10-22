@@ -4,16 +4,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Validation</title>
 </head>
 <body>
-	<h3>입력에 성공했습니다</h3>
+	<h3>입력에 성공했습니다.</h3>
 	<%
 		String id = request.getParameter("id");
 		String passwd = request.getParameter("passwd");
 	%>
 	<p>아이디: <%= id %></p>
-	<p>비밀번호: <%= passwd %></p>
-	
+	<p>비밀번호: <%= passwd %></p>	
 </body>
 </html>
+
+
+
+
+
+
+
