@@ -122,6 +122,7 @@ public class ProcessAddBookServlet extends HttpServlet {
 			pstmt.setString(10, condition);
 			pstmt.setString(11, fileName);
 			pstmt.executeUpdate();
+			System.out.println("했음");
 		} catch (SQLException e) {
 			e.printStackTrace();
 			System.out.println("못했어요");
